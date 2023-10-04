@@ -1,5 +1,5 @@
 const _ = require("lodash");
-const fetchBlogs = require("../utils/fetchBlogs");
+const fetchBlogs = require("../utils/fetchBlogs.js");
 
 module.exports = {
   get: async (req, res) => {

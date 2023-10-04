@@ -1,12 +1,12 @@
 const _ = require("lodash");
-const fetchBlogs = require("../utils/fetchBlogs");
+const fetchBlogs = require("../utils/fetchBlogs.js");
 
 module.exports = {
   get: async (req, res) => {
 
     try {
       const response = await fetchBlogs();
-      
+
       const total = _.size(response.blogs);
       const longest = _.maxBy(response.blogs, blog => blog.title.length);
 
