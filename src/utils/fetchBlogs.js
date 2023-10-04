@@ -8,7 +8,7 @@ const fetchBlogs = _.memoize(
     const currentTime = Date.now(); //Get the current time
     const cacheEntry = customCache.get('cache-key');
 
-    if (cacheEntry && currentTime - cacheEntry.timestamp < 10000) {
+    if (cacheEntry && currentTime - cacheEntry.timestamp <10000) {
       return cacheEntry.data;
     }
     else
@@ -33,6 +33,6 @@ const fetchBlogs = _.memoize(
 //Clear the cache after every 10 seconds
 setInterval(() => {
   customCache.clear();
-}, 5000);
+}, 10000);
 
 module.exports = fetchBlogs;

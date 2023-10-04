@@ -6,6 +6,7 @@ module.exports = {
 
     try {
       const response = await fetchBlogs();
+      
       const total = _.size(response.blogs);
       const longest = _.maxBy(response.blogs, blog => blog.title.length);
 
